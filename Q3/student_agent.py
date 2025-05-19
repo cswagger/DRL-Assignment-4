@@ -42,4 +42,4 @@ class Agent(object):
         obs_tensor = torch.tensor(observation, dtype=torch.float32, device=self.device).unsqueeze(0)
         with torch.no_grad():
             action = self.policy.predict_action(obs_tensor)
-        return action.cpu().numpy().flatten()
+        return action.cpu().numpy().flatten() 
